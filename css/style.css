@@ -1,0 +1,161 @@
+:root {
+    --serif: Georgia, "Times New Roman", serif;
+    --vinho: #7a2e3b;
+    --vinho-escuro: #57202b;
+    --creme: #fbf5ec;
+    --texto: #392d2a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    background-color: var(--creme);
+    color: var(--texto);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.6;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem 1rem 0.75rem;
+    background-color: var(--vinho);
+    color: white;
+}
+
+.logoTexto {
+    padding: 0 0.25rem;
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.25;
+}
+
+.navLinks {
+    display: flex;
+    gap: 0.4rem;
+    margin: 0 -1rem;
+    padding: 0 1rem 0.2rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(255 255 255 / 45%) transparent;
+}
+
+.navLinks a {
+    display: inline-flex;
+    min-height: 44px;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    padding: 0.55rem 0.85rem;
+    border-radius: 999px;
+    color: white;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background-color 160ms ease;
+}
+
+.navLinks a:hover,
+.navLinks a:focus-visible {
+    background-color: rgb(255 255 255 / 16%);
+}
+
+.navLinks a:focus-visible {
+    outline: 2px solid white;
+    outline-offset: -3px;
+}
+
+main {
+    width: 100%;
+}
+
+.Apresentacao {
+    min-height: min(68svh, 620px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4.25rem 1.25rem 4rem;
+    text-align: center;
+    background:
+        radial-gradient(ellipse at 50% 0%, rgb(122 46 59 / 9%), transparent 68%),
+        var(--creme);
+}
+
+.Apresentacao h1 {
+    max-width: 18ch;
+    margin: 0 auto 1.25rem;
+    color: var(--vinho-escuro);
+    font-family: var(--serif);
+    font-size: clamp(2.25rem, 10vw, 3.25rem);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1.08;
+    text-wrap: balance;
+}
+
+.Apresentacao p {
+    max-width: 38rem;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    text-wrap: pretty;
+}
+
+.Catalogo {
+    width: min(100% - 2.5rem, 70rem);
+    margin: 0 auto;
+}
+
+@media (min-width: 700px) {
+    nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+        padding: 1rem clamp(1.5rem, 5vw, 4rem);
+    }
+
+    .navLinks {
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+    }
+
+    .navLinks a {
+        padding-inline: 0.75rem;
+    }
+
+    .Apresentacao {
+        min-height: min(72svh, 700px);
+        padding: 5rem 2rem;
+    }
+
+    .Apresentacao h1 {
+        font-size: clamp(3rem, 6vw, 4.5rem);
+    }
+
+    .Apresentacao p {
+        font-size: 1.15rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
