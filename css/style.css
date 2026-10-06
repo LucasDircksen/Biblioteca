@@ -4,6 +4,7 @@
     --vinho-escuro: #57202b;
     --creme: #fbf5ec;
     --texto: #392d2a;
+    --dourado: #e6a953;
 }
 
 * {
@@ -110,9 +111,60 @@ main {
     text-wrap: pretty;
 }
 
-.Catalogo {
-    width: min(100% - 2.5rem, 70rem);
+/* ---------------------------CORPO--------------------------------- */
+.Corpo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem 0.75rem;
+}
+
+.livroDestaque {
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    border: none;
+    border-left: 3px solid var(--dourado);
+}
+
+.imagemDestaque {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    max-width: 240px;
+    height: auto;
     margin: 0 auto;
+    flex-shrink: 0;
+}
+
+.imagemDestaque img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+/* ----------------------------------------------------------------- */
+
+.containerFooter{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--vinho);
+    color: white;
+    padding: 1rem 1rem 0.75rem;
+}
+
+.containerFooter h3{
+    color: var(--dourado);
+    font-family: var(--serif);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 @media (min-width: 700px) {
