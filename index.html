@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -13,60 +13,137 @@
 
 <body>
     <nav>
-        <h2 class="logoTexto">Arcevo Livre</h2>
+        <h2 class="logoTexto">Acervo Livre</h2>
         <div class="navLinks">
-            <a href="">Início</a>
-            <a href="">Destaque</a>
-            <a href="">Busca</a>
-            <a href="">Catálogo</a>
-            <a href="">Sobre</a>
+            <a href="#inicio">Início</a>
+            <a href="#destaque">Em destaque</a>
+            <a href="#busca">Buscar livros</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#sobre">Sobre</a>
         </div>
     </nav>
 
     <main>
 
-        <section class="Apresentacao">
-            <h1>Sua próxima aventura está a um abrir de capa.</h1>
-            <p>Bem-vindo a Biblioteca do Dircksen, a biblioteca comunitária que reúne romances, fantasias e ficções científicas para você descobrir, emprestar e compartilhar.</p>
+        <section class="Apresentacao" id="inicio">
+            <h1>Tem sempre uma boa história esperando por você.</h1>
+            <p>Que bom ter você por aqui! Na Biblioteca do Dircksen, dá para descobrir novos mundos, escolher uma leitura para levar e depois compartilhar a próxima história com alguém.</p>
         </section>
 
         <section class="Corpo">
-            <div>
-                <h2>Livro em Destaque</h2>
+            <div id="destaque">
+                <h2>Uma leitura para conhecer</h2>
                 <span class="livroDestaque">
                     <div class="imagemDestaque">
-                        <img src="./img/OPoderDoTrino.png" alt="Livro em Destaque">
+                        <img src="./img/OPoderDoTrino.png" alt="Capa do livro O Poder do Trino">
                     </div>
                     <div class="conteudoDestaque">
                         <h3>O Poder do Trino</h3>
-                        <p>Em um mundo de RPG onde apenas um governante pode manter o equilíbrio entre as forças do bem e do mal, sem utilizar de mençoes em grupo e leituras noturnas
+                        <p>Em um reino dividido, três forças disputam o destino de todos. Uma fantasia sobre escolhas difíceis, alianças inesperadas e o desafio de manter o equilíbrio.
                         </p>
                     </div>
                 </span>
             </div>
 
-            <div class="BuscaCategoria">
-                <h2>Busca e Categoria</h2>
+            <div class="BuscaCategoria" id="busca">
+                <div class="cabecalhoBusca">
+                    <h2>Encontre sua próxima leitura</h2>
+                    <p>Já sabe o que procura? Busque pelo título, autor ou gênero — ou escolha uma categoria para explorar.</p>
+                </div>
+
+                <div class="barraBusca" role="search">
+                    <label for="campoBusca">Buscar no acervo</label>
+                    <div class="campoBusca">
+                        <span class="iconeBusca" aria-hidden="true">⌕</span>
+                        <input id="campoBusca" type="search" placeholder="Ex.: fantasia, romance..." aria-label="Buscar livros">
+                    </div>
+                </div>
+
+                <div class="categorias" aria-label="Categorias de livros">
+                    <button class="categoria ativo" type="button">Todos</button>
+                    <button class="categoria" type="button">Romance</button>
+                    <button class="categoria" type="button">Fantasia</button>
+                    <button class="categoria" type="button">Ficção</button>
+                    <button class="categoria" type="button">Mistério</button>
+                </div>
             </div>
          
-            <div class="Catalogo">
-                <h2>Catálogo</h2>
+            <div class="Catalogo" id="catalogo">
+                <div class="cabecalhoCatalogo">
+                    <h2>Nosso catálogo</h2>
+                </div>
+
+                <div class="catalogoGrid" aria-label="Catálogo de livros">
+                    <article class="livroCatalogo">
+                        <div class="capaCatalogo capaTrino"></div>
+                        <div class="infoCatalogo">
+                            <span class="tag">Fantasia</span>
+                            <h3>O Poder do Trino</h3>
+                            <p>Luana Costa</p>
+                        </div>
+                    </article>
+
+                    <article class="livroCatalogo">
+                        <div class="capaCatalogo capaRomance"></div>
+                        <div class="infoCatalogo">
+                            <span class="tag">Romance</span>
+                            <h3>Cartas ao Amanhecer</h3>
+                            <p>Isabela Mendes</p>
+                        </div>
+                    </article>
+
+                    <article class="livroCatalogo">
+                        <div class="capaCatalogo capaFiccao"></div>
+                        <div class="infoCatalogo">
+                            <span class="tag">Ficção</span>
+                            <h3>Estação do Horizonte</h3>
+                            <p>Renato Alves</p>
+                        </div>
+                    </article>
+
+                    <article class="livroCatalogo">
+                        <div class="capaCatalogo capaMisterio"></div>
+                        <div class="infoCatalogo">
+                            <span class="tag">Mistério</span>
+                            <h3>Pistas no Silêncio</h3>
+                            <p>Aline Tavares</p>
+                        </div>
+                    </article>
+
+                    <article class="livroCatalogo">
+                        <div class="capaCatalogo capaFantasia2"></div>
+                        <div class="infoCatalogo">
+                            <span class="tag">Fantasia</span>
+                            <h3>A Lâmina do Eclipse</h3>
+                            <p>Mateus Nunes</p>
+                        </div>
+                    </article>
+
+                    <article class="livroCatalogo">
+                        <div class="capaCatalogo capaDrama"></div>
+                        <div class="infoCatalogo">
+                            <span class="tag">Drama</span>
+                            <h3>Janelas de Outono</h3>
+                            <p>Clara Ferreira</p>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="Radape">
+    <footer class="Radape" id="sobre">
 
         <div class="containerFooter">
             <div class="Sobre">
                 <h3>Sobre</h3>
-                <p>A Biblioteca do Dircksen é uma biblioteca comunitária gratuita com romances, fantasias e ficções científicas, promovendo leitura e compartilhamento de conhecimento.</p>
+                <p>A Biblioteca do Dircksen é um espaço comunitário e gratuito para quem gosta de ler. Aqui, cada livro pode ganhar uma nova casa e cada indicação pode abrir caminho para uma boa conversa.</p>
             </div>
 
             <div class="Creditos">
                 <h3>Créditos</h3>
-                <p>© 2026 Biblioteca do Dircksen. Todos os direitos reservados."Ao melhor programador em html e css".</p>
+                <p>© 2026 Biblioteca do Dircksen. Feito com carinho por quem acredita que boas histórias ficam ainda melhores quando são compartilhadas.</p>
             </div>
         </div>
 

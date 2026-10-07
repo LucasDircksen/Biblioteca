@@ -116,7 +116,15 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    padding: 1.5rem 1rem 0.75rem;
+    width: min(100%, 80rem);
+    margin: 0 auto;
+    padding: 1.5rem 1rem 2rem;
+}
+
+.Corpo > div:first-child h2 {
+    color: var(--vinho-escuro);
+    font-family: var(--serif);
+    font-size: clamp(1.5rem, 5vw, 2rem);
 }
 
 .livroDestaque {
@@ -131,12 +139,23 @@ main {
     border-left: 3px solid var(--dourado);
 }
 
+.conteudoDestaque h3 {
+    margin-top: 0;
+    color: var(--vinho-escuro);
+    font-family: var(--serif);
+    font-size: 1.35rem;
+}
+
+.conteudoDestaque p {
+    margin-bottom: 0;
+}
+
 .imagemDestaque {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 240px;
-    max-width: 240px;
+    width: min(100%, 15rem);
+    max-width: 100%;
     height: auto;
     margin: 0 auto;
     flex-shrink: 0;
@@ -147,16 +166,297 @@ main {
     width: 100%;
     height: auto;
 }
-/* ----------------------------------------------------------------- */
+.BuscaCategoria {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    min-width: 0;
+    padding: 1.25rem;
+    background: rgba(122 46 59 / 0.03);
+    border-radius: 1rem;
+}
+
+.cabecalhoBusca {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.cabecalhoBusca h2 {
+    margin: 0;
+    color: var(--vinho-escuro);
+    font-family: var(--serif);
+    font-size: clamp(1.6rem, 4vw, 2.3rem);
+}
+
+.cabecalhoBusca p {
+    margin: 0;
+    color: var(--texto);
+    opacity: 0.8;
+}
+
+.barraBusca {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+.barraBusca label {
+    font-weight: 600;
+    color: var(--vinho-escuro);
+}
+
+.campoBusca {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    min-height: 3rem;
+    background: white;
+    border: 1px solid rgb(122 46 59 / 18%);
+    border-radius: 999px;
+    padding: 0.8rem 1rem;
+    box-shadow: 0 12px 30px rgb(57 45 42 / 6%);
+}
+
+.iconeBusca {
+    font-size: 1.3rem;
+    color: var(--vinho);
+}
+
+.campoBusca input {
+    width: 100%;
+    min-width: 0;
+    min-height: 2.5rem;
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    color: var(--texto);
+    outline: none;
+}
+
+.campoBusca input::placeholder {
+    color: rgb(57 45 42 / 58%);
+}
+
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.categoria {
+    min-height: 2.75rem;
+    border: 1px solid rgb(122 46 59 / 18%);
+    border-radius: 999px;
+    background: white;
+    color: var(--vinho-escuro);
+    padding: 0.55rem 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.categoria:hover,
+.categoria:focus-visible {
+    border-color: var(--vinho);
+    background: rgb(122 46 59 / 8%);
+    outline: none;
+}
+
+.categoria.ativo {
+    background: var(--vinho);
+    border-color: var(--vinho);
+    color: white;
+}
+
+.resultadoBusca {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.livroCard {
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+    padding: 0.8rem;
+    border-radius: 0.9rem;
+    background: white;
+    border: 1px solid rgb(122 46 59 / 10%);
+    box-shadow: 0 10px 24px rgb(57 45 42 / 5%);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.livroCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgb(57 45 42 / 8%);
+}
+
+.capaLivro {
+    width: 68px;
+    height: 92px;
+    border-radius: 0.65rem;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, var(--dourado), var(--vinho));
+    position: relative;
+    overflow: hidden;
+}
+
+.capaLivro::before,
+.capaCatalogo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgb(255 255 255 / 18%), transparent 52%, rgb(0 0 0 / 10%));
+}
+
+.capaTrino {
+    background: linear-gradient(135deg, #d48c4a, #7a2e3b);
+}
+
+.capaRomance {
+    background: linear-gradient(135deg, #f4d7a0, #d87d8d);
+}
+
+.capaFiccao {
+    background: linear-gradient(135deg, #7eb8d9, #2d4e6a);
+}
+
+.capaMisterio {
+    background: linear-gradient(135deg, #c8b5f2, #4e3d71);
+}
+
+.capaFantasia2 {
+    background: linear-gradient(135deg, #f1b76a, #a24761);
+}
+
+.capaDrama {
+    background: linear-gradient(135deg, #d6d1d9, #776f82);
+}
+
+.infoLivro {
+    flex: 1;
+}
+
+.tag {
+    display: inline-block;
+    margin-bottom: 0.35rem;
+    padding: 0.25rem 0.55rem;
+    border-radius: 999px;
+    background: rgb(230 169 83 / 18%);
+    color: var(--vinho-escuro);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.infoLivro h3,
+.infoCatalogo h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    color: var(--texto);
+}
+
+.autor {
+    margin: 0.2rem 0 0;
+    color: rgb(57 45 42 / 72%);
+    font-size: 0.92rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.Catalogo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 0;
+    padding: 0.25rem 0;
+}
+
+.cabecalhoCatalogo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.cabecalhoCatalogo h2 {
+    margin: 0;
+    color: var(--vinho-escuro);
+    font-family: var(--serif);
+    font-size: clamp(1.6rem, 4vw, 2.3rem);
+}
+
+.verMais {
+    color: var(--vinho);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.catalogoGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+.livroCatalogo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    min-width: 0;
+    padding: 0.65rem;
+    border-radius: 0.9rem;
+    background: white;
+    border: 1px solid rgb(122 46 59 / 10%);
+    box-shadow: 0 10px 24px rgb(57 45 42 / 5%);
+}
+
+.capaCatalogo {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 0.7rem;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--dourado), var(--vinho));
+}
+
+.infoCatalogo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.infoCatalogo h3 {
+    font-size: 1rem;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.infoCatalogo p {
+    margin: 0;
+    color: rgb(57 45 42 / 72%);
+    font-size: 0.86rem;
+}
 
 .containerFooter{
     display: flex;
     gap: 1rem;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     background-color: var(--vinho);
     color: white;
     padding: 1rem 1rem 0.75rem;
+}
+
+.containerFooter > div {
+    width: min(100%, 35rem);
+}
+
+.containerFooter p {
+    margin-top: 0.35rem;
 }
 
 .containerFooter h3{
@@ -168,12 +468,25 @@ main {
 }
 
 @media (min-width: 700px) {
+    body {
+        font-size: 18px;
+    }
+
+    .Corpo {
+        gap: 2rem;
+        padding: 2rem clamp(1.5rem, 4vw, 3rem) 3rem;
+    }
+
     nav {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         gap: 1.5rem;
         padding: 1rem clamp(1.5rem, 5vw, 4rem);
+    }
+
+    .logoTexto {
+        font-size: 1.8rem;
     }
 
     .navLinks {
@@ -184,6 +497,7 @@ main {
 
     .navLinks a {
         padding-inline: 0.75rem;
+        font-size: 1rem;
     }
 
     .Apresentacao {
@@ -197,6 +511,95 @@ main {
 
     .Apresentacao p {
         font-size: 1.15rem;
+    }
+
+    .livroDestaque {
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .conteudoDestaque h3 {
+        font-size: 1.7rem;
+    }
+
+    .imagemDestaque {
+        width: min(35%, 15rem);
+        margin: 0;
+    }
+
+    .cabecalhoBusca h2,
+    .cabecalhoCatalogo h2,
+    .Corpo > div:first-child h2 {
+        font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    .campoBusca input,
+    .categoria,
+    .tag,
+    .infoCatalogo p,
+    .infoLivro h3,
+    .infoCatalogo h3,
+    .autor,
+    .conteudoDestaque p,
+    .containerFooter p {
+        font-size: 1rem;
+    }
+
+    .catalogoGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .livroCatalogo {
+        padding: 0.85rem;
+    }
+
+    .containerFooter {
+        flex-direction: row;
+        justify-content: center;
+        gap: clamp(2rem, 8vw, 7rem);
+        padding: 1.5rem clamp(1.5rem, 5vw, 4rem);
+    }
+
+    .containerFooter h3 {
+        font-size: 1.75rem;
+    }
+
+    .containerFooter > div {
+        width: min(50%, 35rem);
+    }
+}
+
+@media (min-width: 1000px) {
+    body {
+        font-size: 19px;
+    }
+
+    .catalogoGrid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+
+    .livroCatalogo {
+        padding: 1rem;
+        transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .livroCatalogo:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 32px rgb(57 45 42 / 10%);
+    }
+
+    .BuscaCategoria {
+        padding: 1.75rem;
+    }
+
+    .cabecalhoBusca h2,
+    .cabecalhoCatalogo h2,
+    .Corpo > div:first-child h2 {
+        font-size: clamp(2.2rem, 2.5vw, 3rem);
     }
 }
 
