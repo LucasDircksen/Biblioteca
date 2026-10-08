@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" role="img"><title>Capa de O Farol Esquecido</title>
+<rect width="300" height="450" fill="#1f4e5f"/><rect x="16" y="16" width="268" height="418" fill="none" stroke="#f1e3c6" stroke-width="2" opacity=".6"/>
+<circle cx="150" cy="120" r="46" fill="#f1e3c6" opacity=".18"/><circle cx="150" cy="120" r="22" fill="#f1e3c6" opacity=".35"/>
+<text x="150" y="240" text-anchor="middle" font-family="Georgia,serif" font-size="30" font-weight="bold" fill="#f1e3c6"><tspan x="150" dy="0">O Farol</tspan><tspan x="150" dy="36">Esquecido</tspan></text>
+<line x1="90" y1="372" x2="210" y2="372" stroke="#f1e3c6" stroke-width="2"/>
+<text x="150" y="400" text-anchor="middle" font-family="Georgia,serif" font-size="18" fill="#f1e3c6">Caio Duarte</text></svg>

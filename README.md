@@ -47,12 +47,14 @@ Se preferir, use a extensão **Live Server** no Visual Studio Code para servir a
 
 | Livro | Autor(a) | Gênero |
 |---|---|---|
-| O Poder do Trino | Luana Costa | Fantasia |
-| Cartas ao Amanhecer | Isabela Mendes | Romance |
-| Estação do Horizonte | Renato Alves | Ficção |
-| Pistas no Silêncio | Aline Tavares | Mistério |
-| A Lâmina do Eclipse | Mateus Nunes | Fantasia |
-| Janelas de Outono | Clara Ferreira | Drama |
+| O Farol Esquecido | Caio Duarte | Drama |
+| Entre Páginas | Lia Martins | Romance |
+| Cartas de Outono | Helena Prado | Drama |
+| O Último Dragão de Vidro | Marina Albuquerque | Fantasia |
+| A Torre das Brumas | Rafael Nogueira | Mistério |
+| Herdeiros do Trovão | Tiago Salles | Fantasia |
+| Estação Andrômeda | Júlia Vasconcelos | Ficção |
+| Código Zero | Bruno Fontes | Ficção |
 
 ## Créditos
 
