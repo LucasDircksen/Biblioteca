@@ -21,12 +21,10 @@ O campo de busca e os botões de categoria são elementos visuais no estado atua
 
 Não é necessário instalar dependências nem configurar um servidor para visualizar o site.
 
-## Como executar
+## Como acessar o site 
 
-1. Clone ou baixe este repositório.
-2. Abra o arquivo `index.html` em um navegador.
-
-Se preferir, use a extensão **Live Server** no Visual Studio Code para servir a página localmente.
+Você pode clonar o repositório ou acessar o link do vercel 
+https://biblioteca-two-vert.vercel.app/
 
 ## Estrutura do projeto
 
